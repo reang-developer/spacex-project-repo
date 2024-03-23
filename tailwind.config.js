@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      display:["focus-group"],
       fotfamily:{
         sans:['Roboto','sans-serif']
       },
