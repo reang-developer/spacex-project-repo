@@ -2,15 +2,12 @@ import React from 'react'
 // import{FaHome} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Sidebar = ({sidebarToggle}) => {
+const Sidebar = ({sidebarToggle,setSidebarToggle}) => {
     return (
-        <div className={`${sidebarToggle? " hidden " : " block "}w-64 bg-gray-800 fixed h-full px-4 py-4 group`}>
-            <div className='my-2 mb-4 '>
-                <h1 className='text-2x text-white font-bold group-focus:block top-full right-0'> <FontAwesomeIcon icon="fa-solid fa-bars" 
-                onClick={()=>setSidebarToggle(!sidebarToggle)}/> Admin Dashboard</h1>
-            </div>
-            <hr />
-            <ul className='mt-3 text-white font-bold text-sm '>
+        <div className={`w-64 bg-gray-800  h-full px-4 py-4 group`}>
+            
+            {/* <hr /> */}
+            <ul className={`mt-3 text-white font-bold text-sm ${sidebarToggle? " hidden " : " block "}`} >
                 <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
                     <a href="" className='px-3'>
                         <FontAwesomeIcon icon="fa-solid fa-dove" className='inline-block w-6 h-6 mr-2 -mt-2' />

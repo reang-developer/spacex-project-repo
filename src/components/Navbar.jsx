@@ -1,12 +1,20 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/images/logo.png';
+import Sidebar from './Sidebar';
+
 
 const Navbar = ({ sidebarToggle, setSidebarToggle }) => {
     return (
         <nav className='bg-gray-800 px-4 py-3 flex justify-between ' >
-            
-            <a className="flex flex-shrink-0 items-center mr-4" href="/index.html">
+
+
+<div className='my-2 mb-4 '>
+                <h1 className='text-2x text-white font-bold group-focus:block top-full right-0'> <FontAwesomeIcon icon="fa-solid fa-bars" 
+                onClick={()=>setSidebarToggle(!sidebarToggle)}/></h1>
+            </div>
+             <Sidebar sidebarToggle = {sidebarToggle} setSidebarToggle={setSidebarToggle} />
+            <a className="flex flex-shrink-0 items-center mr-4 ml-64" href="/index.html">
                 <img
                     className="h-10 w-auto"
                     src={logo}

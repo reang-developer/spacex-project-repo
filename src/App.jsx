@@ -15,7 +15,6 @@ import { useState } from "react";
   const [sidebarToggle,setSidebarToggle]=useState(false)
    return (
      <div className="flex">
-       <Sidebar sidebarToggle={sidebarToggle}/>
        <Dashboard
        sidebarToggle={sidebarToggle}
        setSidebarToggle={setSidebarToggle}/>
